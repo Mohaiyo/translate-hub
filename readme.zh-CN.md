@@ -1,6 +1,13 @@
-# Translate Hub
+<h1 align="center">
+Translate Hub
+</h1>
 
+<div align="center">
 利用云平台上的翻译 API 或 AI 功能，结合 Alfred 工作流程，实现快速翻译，提升您的工作效率。
+
+[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config) [![Alfy](https://img.shields.io/badge/Alfy-Sindre%20Sorhus-blue?color=black)](https://github.com/sindresorhus/alfy)
+
+</div>
 
 [English](./README.md) | **中文**
 

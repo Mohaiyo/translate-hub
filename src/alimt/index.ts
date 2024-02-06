@@ -1,6 +1,9 @@
 import { env } from 'node:process'
 import Client, { TranslateGeneralRequest } from '@alicloud/alimt20181012'
-import type { TranslateGeneralRequest as TranslateGeneralRequestType, TranslateGeneralResponse } from '@alicloud/alimt20181012'
+import type {
+  TranslateGeneralRequest as TranslateGeneralRequestType,
+  TranslateGeneralResponse
+} from '@alicloud/alimt20181012'
 import * as $OpenApi from '@alicloud/openapi-client'
 import * as $Util from '@alicloud/tea-util'
 import alfy from 'alfy'
@@ -19,7 +22,7 @@ function createClient(accessKeyId: string, accessKeySecret: string) {
     // required, your AccessKey ID
     accessKeyId,
     // required, your AccessKey Secret
-    accessKeySecret,
+    accessKeySecret
   })
   // Endpoint please reference https://api.aliyun.com/product/alimt
   config.endpoint = `mt.aliyuncs.com`

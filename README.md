@@ -1,6 +1,13 @@
-# Translate Hub
+<h1 align="center">
+  Translate Hub
+</h1>
 
+<div align="center">
 Utilize the translation API or AI capabilities on the cloud platform, combined with the Alfred workflow, to achieve rapid translation and enhance your work efficiency.
+
+[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config) [![Alfy](https://img.shields.io/badge/Alfy-Sindre%20Sorhus-blue?color=black)](https://github.com/sindresorhus/alfy)
+
+</div>
 
 **English** | [中文](./README.zh-CN.md)
 
