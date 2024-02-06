@@ -9,7 +9,7 @@ Utilize the translation API or AI capabilities on the cloud platform, combined w
 
 </div>
 
-**English** | [中文](./README.zh-CN.md)
+**English** | [中文](./readme.zh-CN.md)
 
 ## Installation
 
