@@ -3,6 +3,7 @@ Translate Hub
 </h1>
 
 <div align="center">
+
 利用云平台上的翻译 API 或 AI 功能，结合 Alfred 工作流程，实现快速翻译，提升您的工作效率。
 
 [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config) [![Alfy](https://img.shields.io/badge/Alfy-Sindre%20Sorhus-blue?color=black)](https://github.com/sindresorhus/alfy)
@@ -10,6 +11,16 @@ Translate Hub
 </div>
 
 [English](./README.md) | **中文**
+
+## 平台
+
+|      平台       |      是否支持      | 说明                                                                                                                                                                                                                                         |
+| :-------------: | :----------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   阿里云翻译    | :white_check_mark: | 机器翻译通用版每月的前 100 万字符免费，超出的部分会按照 50 元 / 百万字符收取费用；[官方文档](https://www.aliyun.com/product/ai/alimt),[定价](https://help.aliyun.com/zh/machine-translation/product-overview/pricing-of-machine-translation) |
+|     OpenAI      | :white_check_mark: | [OpenAI API Key 创建](https://platform.openai.com/api-keys)                                                                                                                                                                                  |
+| 微软 Azure 翻译 |        :x:         | 每月翻译 200 万字之内都是免费的，如果您每月超过 200 万字，我们会按照 10 美元 / 100 万字 的费率收费。[官方文档](https://learn.microsoft.com/zh-cn/azure/ai-services/translator/text-translation-overview)                                     |
+|    百度翻译     | :white_check_mark: | 提供标准版、高级版、尊享版服务,完成身份认证，最高每月享 200 万免费字符量。[官方文档](https://fanyi-api.baidu.com/product/11)                                                                                                                 |
+|    火山翻译     | :white_check_mark: | 火山翻译每月的前 200 万字符免费，超出的部分会按照 49 元 / 百万字符收取费用。[官方文档](https://www.volcengine.com/docs/4640/68515)                                                                                                           |
 
 ## 安装
 
@@ -57,11 +68,15 @@ pnpm install -g @mohaiyo/translate-hub
 
 ## 设置环境变量
 
-|              name               | value |                     description                     |
-| :-----------------------------: | :---: | :-------------------------------------------------: |
-|   ALIBABA_CLOUD_ACCESS_KEY_ID   |       |   如果你使用阿里云翻译，请设置对应的 ACCES KEY ID   |
-| ALIBABA_CLOUD_ACCESS_KEY_SECRET |       | 如果你使用阿里云翻译，请设置对应的 ACCES KEY SECRET |
-|         OPENAI_API_KEY          |       |      如果你使用 OpenAI,请设置对应的 OpenAi Key      |
+|              name               | value |                     description                      |
+| :-----------------------------: | :---: | :--------------------------------------------------: |
+|   ALIBABA_CLOUD_ACCESS_KEY_ID   |       |   如果你使用阿里云翻译，请设置对应的 ACCESS KEY ID   |
+| ALIBABA_CLOUD_ACCESS_KEY_SECRET |       | 如果你使用阿里云翻译，请设置对应的 ACCESS KEY SECRET |
+|         OPENAI_API_KEY          |       |      如果你使用 OpenAI,请设置对应的 OpenAi Key       |
+|    VOCAENGINE_ACCESS_KEY_ID     |       |    如果你使用火山翻译, 请设置对应的 ACCESS KEY ID    |
+|  VOCAENGINE_ACCESS_KEY_SECRET   |       |  如果你使用火山翻译, 请设置对应的 ACCESS KEY SECRET  |
+|          BAIDU_APP_ID           |       |       如果你使用百度翻译, 请设置对应的 APP ID        |
+|        BAIDU_APP_SECRET         |       |     如果你使用百度翻译, 请设置对应的 APP SECRET      |
 
 环境变量设置截图
 
@@ -80,6 +95,12 @@ pnpm install -g @mohaiyo/translate-hub
 ![trc use](./public/media/trc-use.png)
 ![trc use](./public/media/trc-target.png)
 ![trc use](./public/media/after-translated.png)
+
+## 常见问题
+
+Q:为什么从内置的语言列表设置目标语言后，翻译却不成功？
+
+> 内置的语言默认使用的是 aliyun 的支持语言，不同平台支持的翻译语言存在差异。
 
 ## 相关
 

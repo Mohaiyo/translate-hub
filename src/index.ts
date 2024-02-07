@@ -2,6 +2,8 @@ import alfy from 'alfy'
 import { doTranslate } from './alimt/index.js'
 import { doOpenAiTranslate } from './openai/index.js'
 import { checkStatusCode } from './alimt/checkStatus.js'
+import { doVolcanoTranslate } from './volcano/index.js'
+import { doBaiduTranslate } from './baidu/index.js'
 
 export type PlatformType = 'alimt' | 'azuremt' | 'baidumt' | 'volcenginemt' | 'openai'
 
@@ -14,7 +16,7 @@ async function fetchTranslateData() {
     const res = await doTranslate({
       targetLanguage: target,
       sourceText: alfy.input,
-      sourceLanguage: 'auto',
+      sourceLanguage: 'auto'
     })
     if (res) {
       const { body, statusCode } = res
@@ -27,9 +29,9 @@ async function fetchTranslateData() {
             arg: data?.translated,
             text: {
               copy: data?.translated,
-              largetype: data?.translated,
-            },
-          },
+              largetype: data?.translated
+            }
+          }
         ])
       }
       else {
@@ -48,10 +50,54 @@ async function fetchTranslateData() {
           arg: responseData?.translated ?? '',
           text: {
             copy: responseData?.translated ?? '',
-            largetype: responseData?.translated ?? '',
-          },
-        },
+            largetype: responseData?.translated ?? ''
+          }
+        }
       ])
+    }
+  }
+  else if (platform === 'volcenginemt') {
+    const res = await doVolcanoTranslate(alfy.input, target)
+    if (res && res.TranslationList && res.TranslationList.length) {
+      const translationList = res.TranslationList
+      alfy.output([
+        {
+          title: `Translated from ${translationList[0]?.DetectedSourceLanguage} to ${target} successfully`,
+          subtitle: translationList[0]?.Translation ?? '',
+          arg: translationList[0]?.Translation ?? '',
+          text: {
+            copy: translationList[0]?.Translation ?? '',
+            largetype: translationList[0]?.Translation ?? ''
+          }
+        }
+      ])
+    }
+    else {
+      if (res && res.ResponseMetadata.Error) {
+        const errMsg = `${res.ResponseMetadata.Error.Code}:${res.ResponseMetadata.Error.Message}`
+        alfy.error(errMsg)
+      }
+    }
+  }
+  else if (platform === 'baidumt') {
+    const res = await doBaiduTranslate(alfy.input, target)
+    if (!res.error_code && res.trans_result.length) {
+      const translationList = res.trans_result
+      alfy.output([
+        {
+          title: `Translated from ${res.from} to ${res.to} successfully`,
+          subtitle: translationList[0]?.dst ?? '',
+          arg: translationList[0]?.dst ?? '',
+          text: {
+            copy: translationList[0]?.dst ?? '',
+            largetype: translationList[0]?.dst ?? ''
+          }
+        }
+      ])
+    }
+    else {
+      const errMsg = `${res.error_code}:${res.error_msg}`
+      alfy.error(errMsg)
     }
   }
   else {

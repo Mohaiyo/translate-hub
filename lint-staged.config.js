@@ -1,3 +1,3 @@
 export default {
-  '*': 'eslint --fix',
+  '*': 'eslint --fix'
 }

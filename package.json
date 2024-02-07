@@ -58,9 +58,9 @@
     "@alicloud/alimt20181012": "1.2.0",
     "@alicloud/openapi-client": "^0.4.7",
     "@alicloud/tea-util": "^1.4.7",
+    "@volcengine/openapi": "^1.16.0",
     "alfy": "^2.0.0",
     "openai": "^4.26.1"
-
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.4",

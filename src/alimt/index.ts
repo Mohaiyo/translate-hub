@@ -34,7 +34,7 @@ export type AliMTParams = Pick<TranslateGeneralRequestType, 'sourceLanguage' | '
 export async function doTranslate(params: AliMTParams): Promise<TranslateGeneralResponse | void> {
   if (!client) {
     if (!env.ALIBABA_CLOUD_ACCESS_KEY_ID || !env.ALIBABA_CLOUD_ACCESS_KEY_SECRET) {
-      alfy.log('Please set up your access key id and access key secret')
+      alfy.log('Please set up access key id and secret')
       return
     }
     // Please ensure that the environment variable is set for the code running environment ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET。

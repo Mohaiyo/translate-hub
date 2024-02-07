@@ -11,6 +11,16 @@ Utilize the translation API or AI capabilities on the cloud platform, combined w
 
 **English** | [中文](./readme.zh-CN.md)
 
+## Platform
+
+|          Platform           |     supported      | description                                                                                                                                                                                                                                                                                                                               |
+| :-------------------------: | :----------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|     Aliyun Translation      | :white_check_mark: | The first 1 million characters per month are free for the General Edition of machine translation. Charges of 50 RMB per million characters will apply for any exceeding usage.[document](https://www.aliyun.com/product/ai/alimt),[price](https://help.aliyun.com/zh/machine-translation/product-overview/pricing-of-machine-translation) |
+|           OpenAI            | :white_check_mark: | [OpenAI API Key apply](https://platform.openai.com/api-keys)                                                                                                                                                                                                                                                                              |
+| MicroSoft Azure Translation |        :x:         | Translation of up to 2 million words per month is free. If you exceed 2 million words monthly, charges will apply at a rate of $10 per million words. For further details, please consult the official pricing documentation.。[document](https://learn.microsoft.com/zh-cn/azure/ai-services/translator/text-translation-overview)       |
+|      Baidu Translation      | :white_check_mark: | Provide standard version, advanced version, exclusive version of the service, complete identity authentication, enjoy a maximum of 2 million free characters per month。[document](https://fanyi-api.baidu.com/product/11)                                                                                                                |
+|     Volcano translation     | :white_check_mark: | Volcano translation is free of charge for the first 2 million characters per month, and the excess will be charged according to 49 RMB per million characters.。[document](https://www.volcengine.com/docs/4640/68515)                                                                                                                    |
+
 ## Installation
 
 You need[ Node.js 18+](https://nodejs.org/en) and [Alfred 4](https://www.alfredapp.com/) or later with the paid [Powerpack](https://www.alfredapp.com/powerpack/) upgrade.
@@ -57,11 +67,15 @@ Press the `cmd L` key to display the translation in large text.
 
 ## Environment Variables
 
-|              name               | value |                                 description                                  |
-| :-----------------------------: | :---: | :--------------------------------------------------------------------------: |
-|   ALIBABA_CLOUD_ACCESS_KEY_ID   |       |  If you use Alibaba Cloud Translation, set the corresponding ACCES KEY ID.   |
-| ALIBABA_CLOUD_ACCESS_KEY_SECRET |       | If you use Alibaba Cloud Translation, set the corresponding ACCES KEY SECRET |
-|         OPENAI_API_KEY          |       |             If you use OpenAI, set the corresponding OpenAi Key              |
+|              name               | value |                                  description                                  |
+| :-----------------------------: | :---: | :---------------------------------------------------------------------------: |
+|   ALIBABA_CLOUD_ACCESS_KEY_ID   |       |  If you use Alibaba Cloud Translation, set the corresponding ACCESS KEY ID.   |
+| ALIBABA_CLOUD_ACCESS_KEY_SECRET |       | If you use Alibaba Cloud Translation, set the corresponding ACCESS KEY SECRET |
+|         OPENAI_API_KEY          |       |              If you use OpenAI, set the corresponding OpenAi Key              |
+|    VOCAENGINE_ACCESS_KEY_ID     |       |      If you use Volcano Translation, set the corresponding ACCESS KEY ID      |
+|  VOCAENGINE_ACCESS_KEY_SECRET   |       |    If you use Volcano Translation, set the corresponding ACCESS KEY SECRET    |
+|          BAIDU_APP_ID           |       |          If you use Baidu Translation, set the corresponding APP ID           |
+|        BAIDU_APP_SECRET         |       |        If you use Baidu Translation, set the corresponding APP SECRET         |
 
 environment variables screenshots
 
@@ -80,6 +94,12 @@ If you download the workflow, you may have to manually set the hotkeys yourself.
 ![trc use](./public/media/trc-use.png)
 ![trc use](./public/media/trc-target.png)
 ![trc use](./public/media/after-translated.png)
+
+## FAQ
+
+Q: Why does the translation fail after setting the target language from the built-in language list?
+
+> The built-in languages are supported by aliyun by default. the translation languages supported by different platforms vary.
 
 ## Related
 

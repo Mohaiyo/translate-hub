@@ -8,8 +8,8 @@ const presetApis: ScriptFilterItem[] = [
       'Alibaba Cloud Translation: The first 1 million characters per month are free for the General Edition of machine translation. Charges of 50 RMB per million characters will apply for any exceeding usage.',
     icon: { path: './src/assets/images/aliyun.png' },
     variables: {
-      name: 'Alibaba Cloud Translation',
-    },
+      name: 'Alibaba Cloud Translation'
+    }
   },
   {
     arg: 'platform,openai',
@@ -17,8 +17,8 @@ const presetApis: ScriptFilterItem[] = [
     subtitle: 'OpenAI: Use OpenAI as your translation assistant',
     icon: { path: './src/assets/images/openai.png' },
     variables: {
-      name: 'OpenAI',
-    },
+      name: 'OpenAI'
+    }
   },
   {
     arg: 'platform,volcenginemt',
@@ -27,8 +27,8 @@ const presetApis: ScriptFilterItem[] = [
       'Volcano Translation: The first 2 million characters per month are free. Charges of 49 RMB per million characters will apply for any exceeding usage. For specific details, please refer to the official pricing documentation.',
     icon: { path: './src/assets/images/volcengine.png' },
     variables: {
-      name: 'Volcano Translation',
-    },
+      name: 'Volcano Translation'
+    }
   },
   {
     arg: 'platform,azuremt',
@@ -37,18 +37,18 @@ const presetApis: ScriptFilterItem[] = [
       'Microsoft Azure Cloud Translation: Translation of up to 2 million words per month is free. If you exceed 2 million words monthly, charges will apply at a rate of $10 per million words. For further details, please consult the official pricing documentation.',
     icon: { path: './src/assets/images/azure-logo.png' },
     variables: {
-      name: 'Azure Translation',
-    },
+      name: 'Azure Translation'
+    }
   },
   {
     arg: 'platform,baidumt',
     title: 'Baidu Translation',
-    subtitle: `Baidu Translation: Standard Edition - First 50,000 characters per month are free, with charges applicable only to the exceeded characters at a rate of 49 RMB per million characters (QPS=1). Advanced Edition - First 1 million characters per month are free, with charges applicable only to the exceeded characters at a rate of 49 RMB per million characters (QPS=10). Premium Edition - First 2 million characters per month are free, with charges applicable only to the exceeded characters at a rate of 49 RMB per million characters (QPS=100).`,
+    subtitle: `Baidu Translation: Provide standard version, advanced version, exclusive version of the service, complete identity authentication, enjoy a maximum of 2 million free characters per month`,
     icon: { path: './src/assets/images/baidu.png' },
     variables: {
-      name: 'Baidu Translation',
-    },
-  },
+      name: 'Baidu Translation'
+    }
+  }
 ]
 const presetTargetLanguage: ScriptFilterItem[] = [
   { subtitle: '阿布哈兹语', title: 'Abkhazian', arg: 'target,ab', variables: { target: 'Abkhazian' } },
@@ -118,7 +118,7 @@ const presetTargetLanguage: ScriptFilterItem[] = [
     subtitle: '格雷罗纳瓦特尔语',
     title: 'Guerrero Nahuatl',
     arg: 'target,ngu',
-    variables: { target: 'Guerrero Nahuatl' },
+    variables: { target: 'Guerrero Nahuatl' }
   },
   { subtitle: '格陵兰语', title: 'Kalaallisut', arg: 'target,kl', variables: { target: 'Kalaallisut' } },
   { subtitle: '格鲁吉亚语', title: 'Georgian', arg: 'target,ka', variables: { target: 'Georgian' } },
@@ -179,7 +179,7 @@ const presetTargetLanguage: ScriptFilterItem[] = [
     subtitle: '马里语（俄罗斯）',
     title: 'Mari (Russia)',
     arg: 'target,chm',
-    variables: { target: 'Mari (Russia)' },
+    variables: { target: 'Mari (Russia)' }
   },
   { subtitle: '马其顿语', title: 'Macedonian', arg: 'target,mk', variables: { target: 'Macedonian' } },
   { subtitle: '马绍尔语', title: 'Marshallese', arg: 'target,mh', variables: { target: 'Marshallese' } },
@@ -226,13 +226,13 @@ const presetTargetLanguage: ScriptFilterItem[] = [
     subtitle: '汤加语（汤加群岛）',
     title: 'Tonga (Tonga Islands)',
     arg: 'target,to',
-    variables: { target: 'Tonga (Tonga Islands)' },
+    variables: { target: 'Tonga (Tonga Islands)' }
   },
   {
     subtitle: '汤加语（赞比亚）',
     title: 'Tonga (Zambia)',
     arg: 'target,toi',
-    variables: { target: 'Tonga (Zambia)' },
+    variables: { target: 'Tonga (Zambia)' }
   },
   { subtitle: '提格雷尼亚语', title: 'Tigrinya', arg: 'target,ti', variables: { target: 'Tigrinya' } },
   { subtitle: '图瓦卢语', title: 'Tuvalu', arg: 'target,tvl', variables: { target: 'Tuvalu' } },
@@ -244,7 +244,7 @@ const presetTargetLanguage: ScriptFilterItem[] = [
     subtitle: '瓦瑞语（菲律宾）',
     title: 'Waray (Philippines)',
     arg: 'target,war',
-    variables: { target: 'Waray (Philippines)' },
+    variables: { target: 'Waray (Philippines)' }
   },
   { subtitle: '威尔士语', title: 'Welsh', arg: 'target,cy', variables: { target: 'Welsh' } },
   { subtitle: '文达语', title: 'Venda', arg: 'target,ve', variables: { target: 'Venda' } },
@@ -289,7 +289,7 @@ const presetTargetLanguage: ScriptFilterItem[] = [
   { subtitle: '中文', title: 'Chinese', arg: 'target,zh', variables: { target: 'Chinese' } },
   { subtitle: '中文繁体', title: 'Traditional Chinese', arg: 'target,zh-tw', variables: { target: 'Traditional' } },
   { subtitle: '中文粤语', title: 'Cantonese', arg: 'target,yue', variables: { target: 'Cantonese' } },
-  { subtitle: '祖鲁语', title: 'Zulu', arg: 'target,zu', variables: { target: 'Zulu' } },
+  { subtitle: '祖鲁语', title: 'Zulu', arg: 'target,zu', variables: { target: 'Zulu' } }
 ]
 
 const alfyInput = alfy.input.trim()
@@ -300,7 +300,7 @@ if (alfyInput.startsWith('use')) {
     alfy.output(
       presetApis.filter((item) => {
         return item.arg?.includes(platformStr.toLowerCase()) || item.title.includes(platformStr)
-      }),
+      })
     )
   }
   else {
@@ -313,7 +313,7 @@ else if (alfyInput.startsWith('target')) {
     alfy.output(
       presetTargetLanguage.filter((item) => {
         return item.title?.toLowerCase()?.includes(targetStr.toLowerCase()) || item.subtitle?.includes(targetStr)
-      }),
+      })
     )
   }
   else {

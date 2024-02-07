@@ -7,7 +7,8 @@ export default antfu(
   },
   {
     rules: {
-      'style/comma-dangle': ['error', 'never']
+      'style/comma-dangle': ['error', 'never'],
+      'ts/consistent-type-definitions': ['error', 'type']
     }
   }
 )

@@ -7,11 +7,11 @@ export async function doOpenAiTranslate(text: string, target: string) {
 
   if (!openai) {
     if (!env.OPENAI_API_KEY) {
-      alfy.error('Please set up your openai api key')
+      alfy.error('Please set up openai api key')
       return
     }
     openai = new OpenAI({
-      apiKey: env.OPENAI_API_KEY,
+      apiKey: env.OPENAI_API_KEY
     })
   }
 
@@ -20,11 +20,11 @@ export async function doOpenAiTranslate(text: string, target: string) {
       { role: 'system', content: 'You are a helpful assistant designed to output JSON.' },
       {
         role: 'user',
-        content: `Translate the text below into the target language with language code ${target}: "${text}", and return the response json format: {detectedLanguage: string; translated: string}`,
-      },
+        content: `Translate the text below into the target language with language code ${target}: "${text}", and return the response json format: {detectedLanguage: string; translated: string}`
+      }
     ],
     response_format: { type: 'json_object' },
-    model: 'gpt-3.5-turbo-0125',
+    model: 'gpt-3.5-turbo-0125'
   })
 
   return completion
