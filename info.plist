@@ -112,14 +112,10 @@
 			</dict>
 		</array>
 	</dict>
-	<key>createdby</key>
-	<string>mohaiyo</string>
-	<key>description</key>
-	<string>Utilize the translation API or AI capabilities on the cloud platform, combined with the Alfred workflow, to achieve rapid translation and enhance your work efficiency.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Translate Hub v0.0.1</string>
+	<string>Translate Hub</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -544,9 +540,5 @@
 		<string>BAIDU_APP_SECRET</string>
 		<string>OPENAI_API_KEY</string>
 	</array>
-	<key>version</key>
-	<string>0.0.1</string>
-	<key>webaddress</key>
-	<string>https://github.com/Mohaiyo/translate-hub#readme</string>
 </dict>
 </plist>
