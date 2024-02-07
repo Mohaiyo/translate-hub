@@ -1,7 +1,7 @@
 {
   "name": "@mohaiyo/translate-hub",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@8.1.0",
   "description": "Utilize the translation API or AI capabilities on the cloud platform, combined with the Alfred workflow, to achieve rapid translation and enhance your work efficiency.",
   "author": "mohaiyo",
